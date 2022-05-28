@@ -1,0 +1,21 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: book-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/book_service?useTimeZone=true&serverTimeZone=UTC
+    username: root
+    password: root
+  jackson:
+    default-property-inclusion: NON_NULL
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    url: jdbc:mysql://localhost:3306/
+    schemas: book_service
+    user: root
+    password: root
